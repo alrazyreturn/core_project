@@ -1,0 +1,89 @@
+﻿@model IEnumerable<mad3.Models.Countries>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NationalityA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NationalityE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NationalityAF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NationalityA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NationalityE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NationalityAF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
