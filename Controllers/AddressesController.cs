@@ -19,17 +19,16 @@ namespace mad3.Controllers
         {
             _context = context;
         }
-
-        /*
+ 
         // GET: api/Addresses/all
         [Route("all")]
         [HttpGet(Name = "Get all addreess")]
         public IActionResult  AllAddress()
         {
 
-            //  var AllAddresses2 = _context.Addresses.Include(a=>a.Country).ToList();
+            var AllAddresses2 = _context.Addresses.Include(a=>a.Country).ToList();
 
-            var AllAddresses2 = _context.Addresses;
+            //var AllAddresses2 = _context.Addresses;
 
             var result = new
             {
@@ -43,10 +42,11 @@ namespace mad3.Controllers
             
            
         }
-        */
+        
 
         // GET: api/Addresses
         [HttpGet]
+        [Route("allo")]
         public IEnumerable<Addresses> GetAddresses()
         {
             /*
@@ -55,6 +55,8 @@ namespace mad3.Controllers
                 navigation.Load();
             }
             */
+
+            var address1 = _context.Addresses.ToList();
 
             var address=    _context.Addresses.Include(a => a.Country).ToList();
              

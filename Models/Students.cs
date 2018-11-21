@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace mad3.Models
@@ -16,9 +16,9 @@ namespace mad3.Models
         public DateTime? UpdatedAt { get; set; }
         public DateTime? CreatedAt { get; set; }
 
-        public virtual Users IdNavigation { get; set; }
-        public virtual Levels Level { get; set; }
-        public virtual Status Status { get; set; }
-        public virtual ICollection<Parents> Parents { get; set; }
+        public Users IdNavigation { get; set; }
+        public Levels Level { get; set; }
+        public Status Status { get; set; }
+        public ICollection<Parents> Parents { get; set; }
     }
 }

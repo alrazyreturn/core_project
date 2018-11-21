@@ -1,6 +1,4 @@
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Internal;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace mad3.Models
@@ -11,7 +9,7 @@ namespace mad3.Models
         {
             Addresses = new HashSet<Addresses>();
         }
-    
+
         public int? SchoolId { get; set; }
         public int Id { get; set; }
         public int? RelgionId { get; set; }
@@ -42,13 +40,13 @@ namespace mad3.Models
         public int? CreatedBy { get; set; }
         public int? AddressId { get; set; }
 
-        public virtual Gender Gender { get; set; }
-        public virtual UserKinds Kind { get; set; }
-        public virtual Countries Nationality { get; set; }
-        public virtual Religion Relgion { get; set; }
-        public virtual Parents Parents { get; set; }
-        public virtual Students Students { get; set; }
-        public virtual Teachers Teachers { get; set; }
-        public virtual ICollection<Addresses> Addresses { get; set; }
+        public Gender Gender { get; set; }
+        public UserKinds Kind { get; set; }
+        public Countries Nationality { get; set; }
+        public Religion Relgion { get; set; }
+        public Parents Parents { get; set; }
+        public Students Students { get; set; }
+        public Teachers Teachers { get; set; }
+        public ICollection<Addresses> Addresses { get; set; }
     }
 }

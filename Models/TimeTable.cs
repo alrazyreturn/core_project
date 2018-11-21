@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace mad3.Models
@@ -19,11 +19,11 @@ namespace mad3.Models
         public DateTime? UpdatedAt { get; set; }
         public int? CreatedBy { get; set; }
 
-        public virtual Days Day { get; set; }
-        public virtual Times EndTimeNavigation { get; set; }
-        public virtual Levels Level { get; set; }
-        public virtual Locations Location { get; set; }
-        public virtual Semesters Semester { get; set; }
-        public virtual Times StartTimeNavigation { get; set; }
+        public Days Day { get; set; }
+        public Times EndTimeNavigation { get; set; }
+        public Levels Level { get; set; }
+        public Locations Location { get; set; }
+        public Semesters Semester { get; set; }
+        public Times StartTimeNavigation { get; set; }
     }
 }

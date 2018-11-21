@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace mad3.Models
@@ -15,6 +15,6 @@ namespace mad3.Models
         public DateTime? CreateAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
 
-        public virtual ICollection<Parents> Parents { get; set; }
+        public ICollection<Parents> Parents { get; set; }
     }
 }

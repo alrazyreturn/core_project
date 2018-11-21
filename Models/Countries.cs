@@ -23,7 +23,7 @@ namespace mad3.Models
         public string Code { get; set; }
         public DateTime? CreatedAt { get; set; }
 
-        public virtual ICollection<Addresses> Addresses { get; set; }
-        public virtual ICollection<Users> Users { get; set; }
+        public ICollection<Addresses> Addresses { get; set; }
+        public ICollection<Users> Users { get; set; }
     }
 }

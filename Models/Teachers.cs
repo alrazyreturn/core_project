@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace mad3.Models
@@ -11,6 +11,6 @@ namespace mad3.Models
         public DateTime? CreatedAt { get; set; }
         public string Role { get; set; }
 
-        public virtual Users IdNavigation { get; set; }
+        public Users IdNavigation { get; set; }
     }
 }

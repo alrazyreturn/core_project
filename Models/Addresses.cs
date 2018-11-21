@@ -18,7 +18,7 @@ namespace mad3.Models
         public string District { get; set; }
         public DateTime? CreatedAt { get; set; }
 
-        public virtual Countries Country { get; set; }
-        public virtual Users User { get; set; }
+        public Countries Country { get; set; }
+        public Users User { get; set; }
     }
 }

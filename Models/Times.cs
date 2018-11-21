@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace mad3.Models
@@ -16,7 +16,7 @@ namespace mad3.Models
         public DateTime? UpdatedAt { get; set; }
         public DateTime? CreatedAt { get; set; }
 
-        public virtual ICollection<TimeTable> TimeTableEndTimeNavigation { get; set; }
-        public virtual ICollection<TimeTable> TimeTableStartTimeNavigation { get; set; }
+        public ICollection<TimeTable> TimeTableEndTimeNavigation { get; set; }
+        public ICollection<TimeTable> TimeTableStartTimeNavigation { get; set; }
     }
 }

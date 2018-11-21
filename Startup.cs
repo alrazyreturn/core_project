@@ -24,11 +24,18 @@ namespace mad3
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            
+       
+
+
             services.AddDbContext<mad3.Models.madContext>(options =>
                options.UseNpgsql(
                    Configuration.GetConnectionString("DefaultConnection")));
-                   
+
+            services.AddMvc()
+  .AddJsonOptions(
+      options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+  );
+
 
             /*
             services.AddDbContext<Models.madContext>(

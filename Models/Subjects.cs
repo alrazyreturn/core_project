@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace mad3.Models
@@ -16,6 +16,6 @@ namespace mad3.Models
         public float? Cr { get; set; }
         public string TitleE { get; set; }
 
-        public virtual Levels Level { get; set; }
+        public Levels Level { get; set; }
     }
 }
